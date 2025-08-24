@@ -10,7 +10,7 @@ resource "azurerm_linux_virtual_machine" "my_linux_vm" {
   admin_username = "testuser"
   admin_password = "Testpa5s"
 
-  size = "Standard_F16s" # <<<<<<<<<< Try changing this to Standard_F16s_v2 to compare the costs
+  size = "Standard_F16s"
 
   tags = {
     Environment = "production"
@@ -41,7 +41,7 @@ resource "azurerm_service_plan" "my_app_service" {
   os_type = "Windows"
 
   sku_name = "P1v2"
-  worker_count = 4 # <<<<<<<<<< Try changing this to 8 to compare the costs
+  worker_count = 4 
 
   tags = {
     Environment = "Prod"
